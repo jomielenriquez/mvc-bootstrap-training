@@ -16,7 +16,7 @@
 
 ## :bulb: Scope
 - [x] Installing Visual Studio
-  - [x] Selecting the right packages and plugins
+  - Selecting the right packages and plugins
 - [x] Creating your first ASP.NET MVC solution
 
 # 2nd Session
