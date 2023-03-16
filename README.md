@@ -1,5 +1,12 @@
-# :notebook: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications
-> Welcome to the ASP.Net MVC and Bootstrap seminar/training
+<p align="center">
+  <img height="200" src="./img/ASP.NETMVCANDBootstrap.png">
+</p>
+
+<h3 align="center">:notebook: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications</h3>
+
+<p align="center">
+  Welcome to the ASP.Net MVC and Bootstrap seminar/training.
+</p>
 
 ## :wrench: Requirements
 - [x] 1. Visual Studio Community 2022
