@@ -10,3 +10,7 @@
   - [GUIDE](https://www.sqlshack.com/how-to-install-sql-server-express-edition/)
   - [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [x] 4. [Somee](https://somee.com/doka) account
+
+# Sessions
+- [ ] [First Session](https://github.com/jomielenriquez/mvc-bootstrap-training/tree/main/first-session)
+- [ ] [Second Session](https://github.com/jomielenriquez/mvc-bootstrap-training/tree/main/second-session)
