@@ -7,4 +7,4 @@
 :white_check_mark: 2. SQL Server Management Studio (SSMS)
 
 :white_check_mark: 3. SQL Server Management Studio Express
-> (GUIDE)[https://www.sqlshack.com/how-to-install-sql-server-express-edition/]
+  - (GUIDE)[https://www.sqlshack.com/how-to-install-sql-server-express-edition/]
