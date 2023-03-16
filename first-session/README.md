@@ -6,6 +6,8 @@
 <h3 align="center">ASP.NET MVC and Bootstrap/Bootswatch</h3>
 
 <p align="center">
+  1st Session
+  <br>
   We'll spend our first session learning about the visual studio, ASP.NET MVC and how to implement bootstrap
   <br>
   <br>
@@ -13,9 +15,6 @@
   ·
   <a href="https://jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a>
 </p>
-
-# 1st Session
-> We'll spend our first session learning about the visual studio and how to implement bootstrap
 
 ## :bulb: Scope
 - [x] Installing Visual Studio
