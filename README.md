@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="200" src="./img/ASP.NETMVC_Bootstrap.png">
+  <img height="200" src="./img/ASP.NETMVCANDBootstrap2.png">
 </p>
 
 <h3 align="center">:notebook: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications</h3>
