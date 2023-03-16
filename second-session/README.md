@@ -10,9 +10,9 @@
   For the second session, Databases (tables, stored procedures, etc) and deploying the visual studio solution and database to somee.com.
   <br>
   <br>
-  <a href="https://jomielenriquez/mvc-bootstrap-training/issues/new">Report bug</a>
+  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Report bug</a>
   ·
-  <a href="https://jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a>
+  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a>
 </p>
 
 ## :bulb: Scope

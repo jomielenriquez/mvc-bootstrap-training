@@ -11,9 +11,9 @@
   We'll spend our first session learning about the visual studio, ASP.NET MVC and how to implement bootstrap
   <br>
   <br>
-  <a href="https://jomielenriquez/mvc-bootstrap-training/issues/new">Report bug</a>
+  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Report bug</a>
   ·
-  <a href="https://jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a>
+  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a>
 </p>
 
 ## :bulb: Scope
