@@ -3,11 +3,9 @@
   <img height="200" src="https://www.drupal.org/files/project-images/bootstrap-stack.png">
 </p>
 
-<h3 align="center">ASP.NET MVC and Bootstrap/Bootswatch</h3>
+<h3 align="center">1st Session - ASP.NET MVC and Bootstrap/Bootswatch</h3>
 
 <p align="center">
-  1st Session
-  <br>
   We'll spend our first session learning about the visual studio, ASP.NET MVC and how to implement bootstrap
   <br>
   <br>
