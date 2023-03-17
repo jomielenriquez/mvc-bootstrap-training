@@ -80,7 +80,11 @@
 
   ![Create a name for your solution and click create](./img/2.4.png)
 
-- [ ] 
+- [ ] Select MVC and hit Create
+
+  ![Select MVC and hit Create](./img/2.5.png)
+
+
 
 # :clock2: Second Session
 
