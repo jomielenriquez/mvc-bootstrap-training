@@ -90,6 +90,11 @@
 
   ![Running Website](./img/2.7.png)
 
+### :bus: MVC TOUR
+
+![MVC Diagram](./img/MVCDiagram.png)
+
+
 # :clock2: Second Session
 
 <p align="center">
