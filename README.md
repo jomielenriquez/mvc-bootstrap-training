@@ -2,7 +2,7 @@
   <img style="width:100%" src="./img/ASP.NETMVCANDBootstrap2.png">
 </p>
 
-<h3 align="center">:notebook: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications</h3>
+<h3 align="center">:weight_lifting: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications</h3>
 
 <p align="center">
   Welcome to the ASP.Net MVC and Bootstrap seminar/training.
