@@ -91,6 +91,9 @@
   ![Running Website](./img/2.7.png)
 
 ### :bus: MVC TOUR
+> The MVC architectural pattern has existed for a long time in software engineering. All most all the languages use MVC with slight variation, but conceptually it remains the same.
+
+>MVC stands for Model, View, and Controller. MVC separates an application into three components - Model, View, and Controller.
 
 <p align="center">
   <img height="500" src="./img/MVCDiagram.png">
