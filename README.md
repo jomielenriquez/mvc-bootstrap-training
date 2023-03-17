@@ -41,7 +41,7 @@
 - [x] III. Creating your first custom page
 - [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
 
-## :man_technologist: I. Installing Visual Studio
+## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
 - [ ] After installing, open Visual Studio Installer 
 
