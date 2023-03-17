@@ -76,8 +76,11 @@
   ![Select ASP.NET Web Application (.Net Framework)](./img/2.3.png)
 
 - [ ] Create a name for your solution and click create
+  > :warning: Note: Framework should be ".NET Framework 4.7.2"
 
   ![Create a name for your solution and click create](./img/2.4.png)
+
+- [ ] 
 
 # :clock2: Second Session
 
