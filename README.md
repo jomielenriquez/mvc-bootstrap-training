@@ -17,13 +17,13 @@
   - [GUIDE](https://www.sqlshack.com/how-to-install-sql-server-express-edition/)
   - [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [x] 4. [Somee](https://somee.com/doka) account
-- [x] 5. GitHub Account (Not Required)
+- [ ] 5. GitHub Account (Not Required but good to have)
 
 # :clock10: First Session
 
 <p align="center">
-  <img height="200" src="https://devmaster.edu.vn/uploads/images/2020/08/0408/devmaster-asp-net-mvc.jpg">
-  <img height="200" src="https://www.drupal.org/files/project-images/bootstrap-stack.png">
+  <img height="100" src="https://devmaster.edu.vn/uploads/images/2020/08/0408/devmaster-asp-net-mvc.jpg">
+  <img height="100" src="https://www.drupal.org/files/project-images/bootstrap-stack.png">
 </p>
 
 <h3 align="center">1st Session - ASP.NET MVC and Bootstrap/Bootswatch</h3>
