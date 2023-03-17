@@ -60,8 +60,6 @@
 
   ![Go to Individual Components and check ".NET Framework 4.7.2 SDK" and ".NET Framework 4.7.2 targeting pack"](./img/1.5.png)
 
-- [ ] :busstop: Await the installation's completion. 
-
 
 ## :test_tube: II. Creating your first ASP.NET MVC solution
 > For this example, we'll be creating a web site application for this seminar. We'll be adding our seminar poster into our application and use bootstrap to design it.
@@ -84,7 +82,13 @@
 
   ![Select MVC and hit Create](./img/2.5.png)
 
+- [ ] Wait for the creation of your new solution to open before pressing F5 or selecting the IIS Express option at the window's top to run your solution.
 
+  ![Hit F5 or click IIS Express button](./img//2.6.png)
+
+- [ ] After Executing your solution, your web application will be automatically open in your selected browser.
+
+  ![Running Website](./img/2.7.png)
 
 # :clock2: Second Session
 
