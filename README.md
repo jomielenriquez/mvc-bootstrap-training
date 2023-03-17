@@ -92,7 +92,9 @@
 
 ### :bus: MVC TOUR
 
-![MVC Diagram](./img/MVCDiagram.png)
+<p align="center">
+  <img height="500" src="./img/MVCDiagram.png">
+</p>
 
 
 # :clock2: Second Session
