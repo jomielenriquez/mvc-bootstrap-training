@@ -19,6 +19,6 @@
 - [x] 4. [Somee](https://somee.com/doka) account
 - [x] 5. GitHub Account (Not Required)
 
-# :clock930: Sessions :male_detective:
+# :clock930: Sessions
 - [ ] :clock10: [First Session](https://github.com/jomielenriquez/mvc-bootstrap-training/tree/main/first-session)
 - [ ] :clock2: [Second Session](https://github.com/jomielenriquez/mvc-bootstrap-training/tree/main/second-session)
