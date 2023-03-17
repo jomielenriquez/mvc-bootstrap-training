@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="190" src="./img/ASP.NETMVCANDBootstrap2.png">
+  <img style="width:100%" src="./img/ASP.NETMVCANDBootstrap2.png">
 </p>
 
 <h3 align="center">:notebook: ASP.Net MVC and Bootstrap Frameworks for Developing Web Applications</h3>
@@ -41,7 +41,7 @@
 - [x] III. Creating your first custom page
 - [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
 
-## :man_technologist: I. Intalling Visual Studio
+## :man_technologist: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
 - [ ] After installing, open Visual Studio Installer 
 
