@@ -56,10 +56,19 @@
   ![ASP.NET Web Development](./img/1.3.png)
   ![Data Storage Processing](./img/1.4.png)
 
+
+## :test_tube: II. Creating your first ASP.NET MVC solution
+> For this example, we'll be creating a web site application for this seminar. We'll be adding our seminar poster into our application and use bootstrap to design it.
+
+- [ ] Open Visual Studio and click on "Create a new project"
+
+  ![Open Visual Studio Community 2022](./img/2.1.png)
+  ![Click "Create a new project"](./img/2.2.png)
+
 # :clock2: Second Session
 
 <p align="center">
-  <img height="200" src="https://i.morioh.com/210611/b50f500b.webp">
+  <img height="100" src="https://i.morioh.com/210611/b50f500b.webp">
 </p>
 
 <h3 align="center">2nd Session - ASP.NET MVC and Bootstrap/Bootswatch</h3>
