@@ -51,10 +51,16 @@
 
   ![Modify Visual Studio](./img//1.2.png)
 
-- [ ] Check ASP.NET web development, Data storage processing and click Modify
+- [ ] Check ASP.NET web development, Data storage processing
 
   ![ASP.NET Web Development](./img/1.3.png)
   ![Data Storage Processing](./img/1.4.png)
+
+- [ ] Go to Individual Components and check ".NET Framework 4.7.2 SDK" and ".NET Framework 4.7.2 targeting pack" then click modify 
+
+  ![Go to Individual Components and check ".NET Framework 4.7.2 SDK" and ".NET Framework 4.7.2 targeting pack"](./img/1.5.png)
+
+- [ ] :busstop: Await the installation's completion. 
 
 
 ## :test_tube: II. Creating your first ASP.NET MVC solution
@@ -64,6 +70,14 @@
 
   ![Open Visual Studio Community 2022](./img/2.1.png)
   ![Click "Create a new project"](./img/2.2.png)
+
+- [ ] Select ASP.NET Web Application (.Net Framework) and click next
+
+  ![Select ASP.NET Web Application (.Net Framework)](./img/2.3.png)
+
+- [ ] Create a name for your solution and click create
+
+  ![Create a name for your solution and click create](./img/2.4.png)
 
 # :clock2: Second Session
 
