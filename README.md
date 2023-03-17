@@ -42,8 +42,19 @@
 - [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
 
 ## :man_technologist: I. Intalling Visual Studio
+- [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
+- [ ] After installing, open Visual Studio Installer 
 
+  ![Visual Studio Installer](./img/1.1.png)
 
+- [ ] Modify your Visual Studio Comunity 2022
+
+  ![Modify Visual Studio](./img//1.2.png)
+
+- [ ] Check ASP.NET web development, Data storage processing and click Modify
+
+  ![ASP.NET Web Development](./img/1.3.png)
+  ![Data Storage Processing](./img/1.4.png)
 
 # :clock2: Second Session
 
