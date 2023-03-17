@@ -31,19 +31,17 @@
 <p align="center">
   We'll spend our first session learning about the visual studio, ASP.NET MVC and how to implement bootstrap
   <br>
-  <!-- <br>
-  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Report bug</a>
-  ·
-  <a href="https://github.com/jomielenriquez/mvc-bootstrap-training/issues/new">Request feature</a> -->
 </p>
 
 ## :bulb: Scope
-- [x] Installing Visual Studio
+- [x] I. Installing Visual Studio
   - Selecting the right packages and plugins
-- [x] Creating your first ASP.NET MVC solution
+- [x] II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
-- [x] Creating your first custom page
-- [x] Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
+- [x] III. Creating your first custom page
+- [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
+
+## :man_technologist: I. Intalling Visual Studio
 
 
 
