@@ -110,7 +110,7 @@
 
 >We'll modify our website's bootstrap theme as an example. Go to the bootstrap.min.css file in the Content folder to check the bootstrap version first. In this instance, bootstrap 3.4.1 is used in our solution.
 
-> [You will be taken to the bootstrap version 3.4.1 after clicking this](https://bootswatch.com/3/https://bootswatch.com/3/). You can obtain the CSS for your chosen theme from this website.
+> [You will be taken to the bootstrap version 3.4.1 after clicking this](https://bootswatch.com/3). You can obtain the CSS for your chosen theme from this website.
 
 > Download the bootstrap.css and bootstrap.min.css and paste it on your Content folder. Note: These file name are already existing in this folder, Overwrite it to proceed changing the theme.
 
