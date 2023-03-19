@@ -39,7 +39,7 @@
 - [x] II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
 - [x] III. Creating your first custom page
-- [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/)
+- [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
 
 ## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
@@ -104,6 +104,14 @@
 - **View:** View in MVC is a user interface. View display model data to the user and also enables them to modify them. View in ASP.NET MVC is HTML, CSS, and some special syntax (Razor syntax) that makes it easy to communicate with the model and the controller. **View is the User Interface.**
 
 - **Controller:** The controller handles the user request. Typically, the user uses the view and raises an HTTP request, which will be handled by the controller. The controller processes the request and returns the appropriate view as a response. **Controller is the request handler.**
+
+## :page_facing_up: III. Creating your first custom page
+> Creating your first Page
+
+
+## :art: IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
+> Implementing Bootstrap in your page
+
 
 # :clock2: Second Session
 
