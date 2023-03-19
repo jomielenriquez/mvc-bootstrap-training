@@ -38,8 +38,8 @@
   - Selecting the right packages and plugins
 - [x] II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
-- [x] III. Creating your first custom page
-- [x] IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
+- [x] III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
+- [x] IV. Creating your first custom page
 
 ## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
@@ -105,12 +105,20 @@
 
 - **Controller:** The controller handles the user request. Typically, the user uses the view and raises an HTTP request, which will be handled by the controller. The controller processes the request and returns the appropriate view as a response. **Controller is the request handler.**
 
-## :page_facing_up: III. Creating your first custom page
+## :art: III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
+> It's quite simple to change the web application's theme. You can use a variety of free and downloadable CSS files that are available online.
+
+>We'll modify our website's bootstrap theme as an example. Go to the bootstrap.min.css file in the Content folder to check the bootstrap version first. In this instance, bootstrap 3.4.1 is used in our solution.
+
+> [You will be taken to the bootstrap version 3.4.1 after clicking this](https://bootswatch.com/3/https://bootswatch.com/3/). You can obtain the CSS for your chosen theme from this website.
+
+> Download the bootstrap.css and bootstrap.min.css and paste it on your Content folder. Note: These file name are already existing in this folder, Overwrite it to proceed changing the theme.
+
+> Execute your solution.
+  ![New theme implemented](./img/3.1.png)
+
+## :page_facing_up: IV. Creating your first custom page
 > Creating your first Page
-
-
-## :art: IV. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
-> Implementing Bootstrap in your page
 
 
 # :clock2: Second Session
@@ -127,3 +135,10 @@
 
 ## :bulb: Scope
 
+
+
+```
+git add .
+git commit -m "update"
+git push -u origin main
+```
