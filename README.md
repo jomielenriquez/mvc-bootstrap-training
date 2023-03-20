@@ -120,6 +120,23 @@
 ## :page_facing_up: IV. Your first custom page
 > We need to modify the home page and add the image of the seminar.
 
+> Go to Views/Home/Index.cshtml and add the image code
+
+```diff
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style='background-image: url("~/Image/poster.png")'>
+    <h1>ASP.NET MVC And Bootstrap for developing Web Applications</h1>
+    <p class="lead">Welcome to ASP.NET MVC and Bootstrap Seminar</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+++<img src="~/Image/poster.png" style="width:50%" class="center-block"/>
+```
+
+> Code to add image in cshtml
+
 ```html
 <img src="~/Image/poster.png" style="width:50%" class="center-block"/>
 ```
