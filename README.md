@@ -122,7 +122,7 @@
 
 > Go to Views/Home/Index.cshtml and add the image code
 
-```diff-html
+```diff
 @{
     ViewBag.Title = "Home Page";
 }
