@@ -132,7 +132,7 @@
     <p class="lead">Welcome to ASP.NET MVC and Bootstrap Seminar</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-++<img src="~/Image/poster.png" style="width:50%" class="center-block"/>
++ <img src="~/Image/poster.png" style="width:50%" class="center-block"/>
 ```
 
 > Code to add image in cshtml
