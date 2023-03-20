@@ -39,7 +39,7 @@
 - [x] II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
 - [x] III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
-- [x] IV. Creating your first custom page
+- [x] IV. Your first custom page
 
 ## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
@@ -117,8 +117,12 @@
 > Execute your solution.
   ![New theme implemented](./img/3.1.png)
 
-## :page_facing_up: IV. Creating your first custom page
-> Creating your first Page
+## :page_facing_up: IV. Your first custom page
+> We need to modify the home page and add the image of the seminar.
+
+```html
+<img src="~/Image/poster.png" style="width:50%" class="center-block"/>
+```
 
 
 # :clock2: Second Session
