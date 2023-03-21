@@ -215,7 +215,7 @@
 ## :bulb: Scope
 - [x] :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [x] :minidisc: II. Creating new datase using SQL Sever Management Studio
-- [x] III. 
+- [x] :arrows_clockwise: III. Connecting your web application to your database.
 
 ## :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [ ] You must first install SSMS (SQL Server Management Studio) in order to start managing databases. 
@@ -298,6 +298,57 @@ DELETE [CHANGEME_TO_TABLE_NAME] WHERE 1=1
 -- DELETE DATA IN TBLNAMES
 DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 ```
+
+## :arrows_clockwise: III. Connecting your web application to your database.
+> We will now link our web application to the newly built database.
+
+- [ ] Open your Project on your Visual Studio.
+
+- [ ] Go to your solution explorer, right click on Model, click add and click new item.
+
+  ![Adding new Item](./img/2.3.1.png)
+
+- [ ] Under C#, click Data, select ADO.NET Entity Data Model and add name for your database model then click add.
+
+  ![Creating new Model](./img/2.3.2.png)
+
+- [ ] Select EF Designer from database and click next.
+
+  ![Select EF Designer form database](./img/2.3.3.png)
+
+- [ ] Click new connection
+
+  ![new connection](./img/2.3.4.png)
+
+- [ ] Enter server name. You can check your server name in your SSMS
+
+  ![sever name](./img/2.3.5.png)
+
+  - [ ] Go to SSMS and copy the server name and paste it to visual studio connection properties
+
+    ![server name](./img/2.3.6.png)
+
+  - [ ] Paste the server name, select database name and click OK.
+
+    ![server connection](./img/2.3.7.png)
+
+- [ ] Your entity data model wizard will be automatically updated. Click next.
+
+  ![updated](./img/2.3.8.png)
+
+- [ ] Select Entity Framwork 5.0 and click next
+
+  ![Entity Framework 5.0](./img/2.3.9.png)
+
+- [ ] Put a check on tables and click finish.
+
+  ![finish](./img/2.3.10.png)
+
+- [ ] The model you can see below will be created.
+
+  ![data model](./img/2.3.11.png)
+
+> Congratulations, your web application and database are now connected.
 
 ## Code to push update
 ```
