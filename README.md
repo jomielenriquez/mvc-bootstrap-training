@@ -40,6 +40,7 @@
   - Exploring ASP.NET MVC solution
 - [x] III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
 - [x] IV. Your first custom page
+- [x] V. Creating new page
 
 ## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
@@ -141,6 +142,63 @@
 <img src="~/Image/poster.png" style="width:50%" class="center-block"/>
 ```
 
+## :scroll: V. Creating new page
+> Follow these instructions to create a new page in MVC.
+
+- [ ] You'll locate the solution explorer on the right side of your visual studio. Right-click the "Controller" folder, select Add, and then select Controller.
+
+  - ![adding controller](./img/5.1.png)
+
+- [ ] A new form will popup. Select MVC 5 Controller - Empty and click Add.
+
+  - ![MVC 5 Controller](./img/5.2.png)
+
+- [ ] Type in your controller's name. The text "[CHANGEME]" should be changed to your initials. Hit Enter and wait for your new controller to load.
+
+  - ![Adding name](./img/5.3.png)
+
+  ```cs
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Web;
+  using System.Web.Mvc;
+
+  namespace LearningMVC.Controllers
+  {
+      public class JLEPageController : Controller
+      {
+          // GET: JLEPage
+          public ActionResult Index()
+          {
+              return View();
+          }
+      }
+  }
+  ```
+
+- [ ] On your controller, right click inside the index method and click add view.
+
+  - ![Adding new view](./img/5.4.png)
+
+- [ ] Select MVC 5 View and click add
+
+  - ![MVC 5 View](./img/5.5.png)
+
+- [ ] New window will open. Set your view name to "Index" and click add. 
+
+  - ![Adding view name](./img/5.6.png)
+
+- [ ] Wait for the new view to load.
+
+  ```cshtml
+  
+  @{
+      ViewBag.Title = "Index";
+  }
+
+  <h2>Index</h2>
+  ```
 
 # :clock2: Second Session
 
