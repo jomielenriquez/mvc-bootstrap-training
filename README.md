@@ -548,7 +548,21 @@ public ActionResult Add()
 }
 ```
 
-- [ ] In your controller, create a new method for adding new names
+- [ ] In your controller, create a new method for adding new names.
+
+```cs
+// Code for adding new names
+[HttpPost]
+public ActionResult AddName(tblname names)
+{
+  // instantiate NamesReposity
+  NamesRepository namesRepository = new NamesRepository();
+  // Call the saveName Method in NamesRepository
+  string test = namesRepository.saveName(names.firstname, names.lastname);
+  // redirect to index page after inserting new name
+  return RedirectToAction("Index");
+}
+```
 
 ## Code to push update
 ```
