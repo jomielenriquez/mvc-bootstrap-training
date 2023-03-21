@@ -164,9 +164,9 @@
   using System.Web;
   using System.Web.Mvc;
 
-  namespace LearningMVC.Controllers
+  namespace [CHANGEMETOPROJECTNAME].Controllers
   {
-      public class JLEPageController : Controller
+      public class [CHANGEMETOCONTROLLERNAME]Controller : Controller
       {
           // GET: JLEPage
           public ActionResult Index()
@@ -394,7 +394,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 - [ ] Modify your View Page
 
 ```diff
-+ @model IEnumerable<LearningMVC.Models.tblname>
++ @model IEnumerable<[CHANGEME].Models.tblname>
 @{
     ViewBag.Title = "Index";
 }
@@ -402,7 +402,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 <h2>Index</h2>
 
 + @* Code to display data on tblnames*@
-+ @foreach(LearningMVC.Models.tblname names in Model)
++ @foreach([CHANGEME].Models.tblname names in Model)
 + {
 +    // Display firstname each row
 +    <h1>@names.firstname</h1>
@@ -421,7 +421,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
           </tr>
       </thead>
       <tbody>
-          @foreach (LearningMVC.Models.tblname names in Model)
+          @foreach ([CHANGEME].Models.tblname names in Model)
           {
               
               <tr>
