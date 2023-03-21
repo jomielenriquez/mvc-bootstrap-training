@@ -147,15 +147,15 @@
 
 - [ ] You'll locate the solution explorer on the right side of your visual studio. Right-click the "Controller" folder, select Add, and then select Controller.
 
-  - ![adding controller](./img/5.1.png)
+  ![adding controller](./img/5.1.png)
 
 - [ ] A new form will popup. Select MVC 5 Controller - Empty and click Add.
 
-  - ![MVC 5 Controller](./img/5.2.png)
+  ![MVC 5 Controller](./img/5.2.png)
 
 - [ ] Type in your controller's name. The text "[CHANGEME]" should be changed to your initials. Hit Enter and wait for your new controller to load.
 
-  - ![Adding name](./img/5.3.png)
+  ![Adding name](./img/5.3.png)
 
   ```cs
   using System;
@@ -179,15 +179,15 @@
 
 - [ ] On your controller, right click inside the index method and click add view.
 
-  - ![Adding new view](./img/5.4.png)
+  [] ![Adding new view](./img/5.4.png)
 
 - [ ] Select MVC 5 View and click add
 
-  - ![MVC 5 View](./img/5.5.png)
+  ![MVC 5 View](./img/5.5.png)
 
 - [ ] New window will open. Set your view name to "Index" and click add. 
 
-  - ![Adding view name](./img/5.6.png)
+  ![Adding view name](./img/5.6.png)
 
 - [ ] Wait for the new view to load.
 
@@ -224,20 +224,20 @@
 - [ ] You must also install SSMS Express.
   - [GUIDE](https://www.sqlshack.com/how-to-install-sql-server-express-edition/) : Follow this guide to install SSMS Express. 
     - :exclamation: NOTE : Use the basic Installation Type.
-    - ![Basic installation](./img/2.1.1.png)
+    ![Basic installation](./img/2.1.1.png)
   - [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 - [ ] After installing SSMS and SSMS Express. open your SSMS by typing "SSMS" in your windows search.
-  - ![Search SSMS](./img/2.1.2.png)
+  ![Search SSMS](./img/2.1.2.png)
 
 - [ ] SSMS will require you to connect to your database. Select the drop down on your SQL Server window and select "Browse for more".
-  - ![Browse for more](./img/2.1.3.png)
+  ![Browse for more](./img/2.1.3.png)
 
 - [ ] Collapse the database engine and select any server under it and click "ok".
-  - ![Select server](./img/2.1.4.png)
+  ![Select server](./img/2.1.4.png)
 
 - [ ] Click connect on your SQL Server window
-  - ![Click connect](./img/2.1.5.png)
+  ![Click connect](./img/2.1.5.png)
   
 
 
