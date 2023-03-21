@@ -409,7 +409,30 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 + }
 ```
 
+- [ ] Displaying tblnames in a table
 
+  ```cshtml
+  <table class="table table-striped table-hover">
+      <thead>
+          <tr>
+              <td>ID</td>
+              <td>First Name</td>
+              <td>Last Name</td>
+          </tr>
+      </thead>
+      <tbody>
+          @foreach (LearningMVC.Models.tblname names in Model)
+          {
+              
+              <tr>
+                  <td>@names.NameID</td>
+                  <td>@names.firstname</td>
+                  <td>@names.lastname</td>
+              </tr>
+          }
+      </tbody>
+  </table>
+  ```
 
 
 ## Code to push update
