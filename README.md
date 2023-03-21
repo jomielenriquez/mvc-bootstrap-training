@@ -393,7 +393,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 
 - [ ] Modify your View Page
 
-```diff cshtml
+```diff
 + @model IEnumerable<LearningMVC.Models.tblname>
 @{
     ViewBag.Title = "Index";
@@ -401,6 +401,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 
 <h2>Index</h2>
 
++ @* Code to display data on tblnames*@
 + @foreach(LearningMVC.Models.tblname names in Model)
 + {
 +    // Display firstname each row
