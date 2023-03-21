@@ -393,18 +393,19 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 
 - [ ] Modify your View Page
 
-```diff
-+@model IEnumerable<LearningMVC.Models.tblname>
+```diff cshtml
++ @model IEnumerable<LearningMVC.Models.tblname>
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
-+@foreach(LearningMVC.Models.tblname names in Model)
-+{
++ @foreach(LearningMVC.Models.tblname names in Model)
++ {
++    // Display firstname each row
 +    <h1>@names.firstname</h1>
-+}
++ }
 ```
 
 
