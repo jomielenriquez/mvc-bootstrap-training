@@ -217,6 +217,7 @@
 - [x] :minidisc: II. Creating new datase using SQL Sever Management Studio
 - [x] :arrows_clockwise: III. Connecting your web application to your database.
 - [x] :computer: IV. Displaying and manipulating data from database to web application
+- [x] :arrow_double_up: V. Deploying your web application to somee.
 
 ## :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [ ] You must first install SSMS (SQL Server Management Studio) in order to start managing databases. 
@@ -882,6 +883,10 @@ namespace LearningMVC.Controllers
   <!-- Example  -->
   <i class="icon-camera-retro"></i> icon-camera-retro
   ```
+
+## :arrow_double_up: V. Deploying your web application to somee.
+> Deploying to somee
+
 
 ## Code to push update
 ```
