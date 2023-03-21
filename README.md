@@ -179,7 +179,7 @@
 
 - [ ] On your controller, right click inside the index method and click add view.
 
-  [] ![Adding new view](./img/5.4.png)
+  ![Adding new view](./img/5.4.png)
 
 - [ ] Select MVC 5 View and click add
 
@@ -246,7 +246,18 @@
   
   ![Click connect](./img/2.1.5.png)
   
-> Congratulations, You are now connected to your datase in your local machine
+> Congrats, you are currently logged into your local machine's database.
+
+:minidisc: II. Creating new datase using SQL Sever Management Studio
+ - [ ] On your SSMS, right click the Databases and click New Datase.
+   
+  ![New Database](./img/2.2.1.png)
+
+- [ ] Create a name for your database and click "OK"
+
+  ![database name](./img/2.2.2.png)
+
+
 
 
 
