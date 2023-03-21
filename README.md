@@ -209,7 +209,7 @@
 <h3 align="center">2nd Session - ASP.NET MVC and Bootstrap/Bootswatch</h3>
 
 <p align="center">
-  For the second session, Databases (tables, stored procedures, etc) and deploying the visual studio solution and database to somee.com.
+  For the second session, Databases (tables, stored procedures, etc) and deploying visual studio solution and database to somee.com.
 </p>
 
 ## :bulb: Scope
@@ -434,6 +434,121 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
   </table>
   ```
 
+### Creating add function for your names table
+- [ ] Create new storedprocedure. Storedprocedure is like a function that you can execute to modify the datas in your database. In this part, we will create a storedprocedure that we can execute from our web application to insert new name on the the tblnames.
+
+- [ ] Open your SSMS again and press CTRL+N to open a new query window and paste the code below.
+> Code to create insert name storedprocedure.
+  ```sql
+  CREATE  procedure [dbo].[sp_insert_name]
+    @fname nvarchar(50),
+    @lname nvarchar(50) 
+  as
+  begin
+
+    insert into tblnames
+      (
+        firstname, 
+        lastname, 
+        CreatedDate
+      )
+      values(
+        @fname,
+        @lname,
+        getdate()
+      )
+
+  end
+  ```
+
+- [ ] Go now to your visual studio and create new folder with the name "Repository"
+  > In your solution explorer, right click on the project name and click "Add" then "New Folder". Put "Repository" as the name of the folder.
+
+- [ ] Right-click on that folder, select "Add," then select "Class," to add a new class. Put "NamesRepository" as the name of the class.
+
+> Add the following code to NamesRepository.cs. The name of your database model should be used in place of the text "[CHANGEME]".
+  ```cs
+  using System;
+  using System.Collections.Generic;
+  using System.Configuration;
+  using System.Data.SqlClient;
+  using System.Linq;
+  using System.Web;
+  using System.Data;
+  using System.Data.EntityClient;
+
+  namespace LearningMVC.Repository
+  {
+      public class NamesRepository
+      {
+          static string connstring = ConfigurationManager.ConnectionStrings["[CHANGEME]Entities"].ConnectionString;
+          static string providerString = new EntityConnectionStringBuilder(connstring).ProviderConnectionString;
+          SqlConnection conn = new SqlConnection(providerString);
+          public string saveName(string fname, string lname)
+          {
+              try
+              {
+                  SqlCommand cmd = new SqlCommand("sp_insert_name", conn);
+                  cmd.CommandType = CommandType.StoredProcedure;
+                  cmd.Parameters.AddWithValue("@fname", fname);
+                  cmd.Parameters.AddWithValue("@lname", lname);
+                  conn.Open();
+                  cmd.ExecuteNonQuery();
+                  conn.Close();
+                  return "Success";
+              }
+              catch {
+                  return "Error";
+              }
+          }
+      }
+  }
+  ```
+
+- [ ] Modify your controller and create a new page for adding new name.
+
+```cs
+// paste this code in your controller.
+public ActionResult Add()
+{
+    return View();
+}
+```
+
+- [ ] Right click on the new action result and click add view.
+
+```cshtml
+@model [CHANGEMEOTPROJECTNAME].Models.tblname
+@{
+    ViewBag.Title = "Add";
+}
+
+@using (Html.BeginForm("AddName", "[CHANGEMETOCONTROLLERNAME]", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <fieldset>
+        <legend><h2>Add</h2></legend>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">First Name: </label>
+            <div class="col-lg-10">
+                @Html.TextBoxFor(model => model.firstname, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="col-lg-2 control-label">Last Name</label>
+            <div class="col-lg-10">
+                @Html.TextBoxFor(model => model.lastname, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-success">Add</button>
+            </div>
+        </div>
+    </fieldset>
+}
+```
+
+- [ ] In your controller, create a new method for adding new names
 
 ## Code to push update
 ```
