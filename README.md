@@ -34,13 +34,13 @@
 </p>
 
 ## :bulb: Scope
-- [x] I. Installing Visual Studio
+- [x] :wrench: I. Installing Visual Studio
   - Selecting the right packages and plugins
-- [x] II. Creating your first ASP.NET MVC solution
+- [x] :test_tube: II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
-- [x] III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
-- [x] IV. Your first custom page
-- [x] V. Creating new page
+- [x] :art: III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
+- [x] :page_facing_up: IV. Your first custom page
+- [x] :scroll: V. Creating new page
 
 ## :wrench: I. Installing Visual Studio
 - [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
