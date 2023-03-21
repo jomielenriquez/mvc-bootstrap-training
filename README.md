@@ -213,7 +213,32 @@
 </p>
 
 ## :bulb: Scope
+- [x] :hammer_and_wrench: I. Installing SSMS and SSMS Express
+- [x] :minidisc: II. Creating new datase using SQL Sever Management Studio
+- [x] III. 
 
+## :hammer_and_wrench: I. Installing SSMS and SSMS Express
+- [ ] You must first install SSMS (SQL Server Management Studio) in order to start managing databases. 
+  [Donwload SSMS](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) and install.
+
+- [ ] You must also install SSMS Express.
+  - [GUIDE](https://www.sqlshack.com/how-to-install-sql-server-express-edition/) : Follow this guide to install SSMS Express. 
+    - :exclamation: NOTE : Use the basic Installation Type.
+    - ![Basic installation](./img/2.1.1.png)
+  - [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+
+- [ ] After installing SSMS and SSMS Express. open your SSMS by typing "SSMS" in your windows search.
+  - ![Search SSMS](./img/2.1.2.png)
+
+- [ ] SSMS will require you to connect to your database. Select the drop down on your SQL Server window and select "Browse for more".
+  - ![Browse for more](./img/2.1.3.png)
+
+- [ ] Collapse the database engine and select any server under it and click "ok".
+  - ![Select server](./img/2.1.4.png)
+
+- [ ] Click connect on your SQL Server window
+  - ![Click connect](./img/2.1.5.png)
+  
 
 
 
