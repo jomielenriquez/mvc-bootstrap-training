@@ -216,6 +216,7 @@
 - [x] :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [x] :minidisc: II. Creating new datase using SQL Sever Management Studio
 - [x] :arrows_clockwise: III. Connecting your web application to your database.
+- [x] :computer: IV. Displaying data from database to web application
 
 ## :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [ ] You must first install SSMS (SQL Server Management Studio) in order to start managing databases. 
@@ -349,6 +350,65 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
   ![data model](./img/2.3.11.png)
 
 > Congratulations, your web application and database are now connected.
+
+## :computer: IV. Displaying data from database to web application
+ > We will now display the data from the database table "tblname" to the page that we previously created. 
+
+- [ ] Go to solution explorer on your visual studio and open the controller that you created.
+
+  ![controller](./img/2.4.1.png)
+
+- [ ] Modify the code on your controller
+
+  ```diff
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Web;
+  using System.Web.Mvc;
+  + // Code to include your data model that you previously created
+  + using LearningMVC.Models;
+
+  namespace LearningMVC.Controllers
+  {
+      public class JLEPageController : Controller
+      {
+          // GET: JLEPage
+          public ActionResult Index()
+          {
+  +            // Instantiate the database Entity
+  +            MVCSEMINARDBEntities MVC = new MVCSEMINARDBEntities();
+
+  +            // get all the data from your database tblname
+  +            var data = from name in MVC.tblnames select name;
+  -            return View();
+  +            // return the view with the data
+  +            return View(data);
+          }
+      }
+  }
+  ```
+
+- [ ] Go to the view of this method by right clicking the method and clicking the "Go to View".
+
+- [ ] Modify your View Page
+
+```diff
++@model IEnumerable<LearningMVC.Models.tblname>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
++@foreach(LearningMVC.Models.tblname names in Model)
++{
++    <h1>@names.firstname</h1>
++}
+```
+
+
+
 
 ## Code to push update
 ```
