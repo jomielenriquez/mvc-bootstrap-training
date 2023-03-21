@@ -651,7 +651,7 @@ public ActionResult Delete(int id)
                 <td>@names.NameID</td>
                 <td>@names.firstname</td>
                 <td>@names.lastname</td>
-+                <td>@Html.ActionLink("Delete", "Delete", "JLEPage", new { id= names.NameID} , new { @class = "btn btn-danger"})</td>
++                <td><a href="@Url.Action("Delete","JLEPage", new { id = names.NameID })" class="btn btn-danger">Delete</a></td>
             </tr>
         }
     </tbody>
@@ -799,8 +799,8 @@ namespace LearningMVC.Controllers
         <td>@names.firstname</td>
         <td>@names.lastname</td>
         <td>
-          @Html.ActionLink("Delete", "Delete", "JLEPage", new { id= names.NameID} , new { @class = "btn btn-danger"})
-+          @Html.ActionLink("Edit","Add","JLEPage", new { id = names.NameID }, new { @class = "btn btn-warning" })
+          <a href="@Url.Action("Delete","JLEPage", new { id = names.NameID })" class="btn btn-danger">Delete</a>
++          <a href="@Url.Action("Add","JLEPage", new { id = names.NameID })" class="btn btn-warning">Edit</a>
         </td>
       </tr>
     }
@@ -860,13 +860,28 @@ namespace LearningMVC.Controllers
 +        {
 +          <button type="submit" class="btn btn-success">Save</button>
 +        }
-+        @Html.ActionLink("Cancel", "Index", "JLEPage", new {@class="btn btn-danger"})
++        <a href="@Url.Action("Index","JLEPage")" class="btn btn-danger">Cancel</a>
       </div>
     </div>
   </fieldset>
 }
 
 ```
+
+### Implementing [font awesome 3.2.1](https://fontawesome.com/v3/icons/) in your web application
+
+- [ ] Modify your _Layout.cshtml.
+  > Add the link below in the head of _Layout_cshtml
+  ```html
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+  ```
+
+- [ ] Add font on the anywhere in your page
+
+  ```html
+  <!-- Example  -->
+  <i class="icon-camera-retro"></i> icon-camera-retro
+  ```
 
 ## Code to push update
 ```
