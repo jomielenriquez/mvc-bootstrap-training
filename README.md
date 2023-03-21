@@ -223,8 +223,11 @@
 
 - [ ] You must also install SSMS Express.
   [ ] [GUIDE](https://www.sqlshack.com/how-to-install-sql-server-express-edition/) : Follow this guide to install SSMS Express. 
-    - :exclamation: NOTE : Use the basic Installation Type.
+    
+    >:exclamation: NOTE : Use the basic Installation Type.
+    
     ![Basic installation](./img/2.1.1.png)
+
   [ ] [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 - [ ] After installing SSMS and SSMS Express. open your SSMS by typing "SSMS" in your windows search.
@@ -243,6 +246,7 @@
   
   ![Click connect](./img/2.1.5.png)
   
+> Congratulations, You are now connected to your datase in your local machine
 
 
 
