@@ -216,7 +216,7 @@
 - [x] :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [x] :minidisc: II. Creating new datase using SQL Sever Management Studio
 - [x] :arrows_clockwise: III. Connecting your web application to your database.
-- [x] :computer: IV. Displaying data from database to web application
+- [x] :computer: IV. Displaying and manipulating data from database to web application
 
 ## :hammer_and_wrench: I. Installing SSMS and SSMS Express
 - [ ] You must first install SSMS (SQL Server Management Studio) in order to start managing databases. 
@@ -351,7 +351,7 @@ DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
 
 > Congratulations, your web application and database are now connected.
 
-## :computer: IV. Displaying data from database to web application
+## :computer: IV. Displaying and manipulating data from database to web application
  > We will now display the data from the database table "tblname" to the page that we previously created. 
 
 - [ ] Go to solution explorer on your visual studio and open the controller that you created.
@@ -562,6 +562,104 @@ public ActionResult AddName(tblname names)
   // redirect to index page after inserting new name
   return RedirectToAction("Index");
 }
+```
+
+### Delete function for tblnames
+
+- [ ] Create new storedprocedure of delete function
+
+> copy the script below and paste it to ssms query and execute.
+
+  ```sql
+  SET ANSI_NULLS ON
+  GO
+  SET QUOTED_IDENTIFIER ON
+  GO
+  ALTER PROCEDURE [dbo].[sp_delete_name]
+    @id int
+  AS
+  BEGIN
+    DELETE tblnames WHERE NameID = @ID
+  END
+  ```
+- [ ] Modify "NamesRepository.cs". Add the method below
+
+  ```cs
+  public string deleteName(int id)
+  {
+    try
+    {
+      SqlCommand cmd = new SqlCommand("sp_delete_name", conn);
+      cmd.CommandType = CommandType.StoredProcedure;
+      cmd.Parameters.AddWithValue("@ID", id);
+      conn.Open();
+      cmd.ExecuteNonQuery();
+      conn.Close();
+      return "Success";
+    }
+    catch
+    {
+      return "Error";
+    }
+  }
+  ```
+
+- [ ] Paste the code below on your controller.
+
+```cs
+public ActionResult Delete(int id)
+{
+  // Instantiate NamesRepository
+  NamesRepository namesRepository = new NamesRepository();
+  // Execute delete function on NamesRepository
+  string test = namesRepository.deleteName(id);
+
+  // Redirect to index page of your repository
+  return RedirectToAction("Index");
+}
+```
+
+- [ ] Modify the index view of your controller.
+
+```diff
+@model IEnumerable<LearningMVC.Models.tblname>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@* Code to display data on tblnames*@
+@*@foreach (LearningMVC.Models.tblname names in Model)
+    {
+        // Display firstname each row
+        <h1>@names.firstname</h1>
+}*@
+
+@Html.ActionLink("Add", "Add", "JLEPage", new { @class="btn btn-primary"})
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="info">
+            <td>ID</td>
+            <td>First Name</td>
+            <td>Last Name</td>
++            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (LearningMVC.Models.tblname names in Model)
+        {
+
+            <tr>
+                <td>@names.NameID</td>
+                <td>@names.firstname</td>
+                <td>@names.lastname</td>
++                <td>@Html.ActionLink("Delete", "Delete", "JLEPage", new { id= names.NameID} , new { @class = "btn btn-danger"})</td>
+            </tr>
+        }
+    </tbody>
+</table>
 ```
 
 ## Code to push update
