@@ -571,11 +571,7 @@ public ActionResult AddName(tblname names)
 > copy the script below and paste it to ssms query and execute.
 
   ```sql
-  SET ANSI_NULLS ON
-  GO
-  SET QUOTED_IDENTIFIER ON
-  GO
-  ALTER PROCEDURE [dbo].[sp_delete_name]
+  CREATE PROCEDURE [dbo].[sp_delete_name]
     @id int
   AS
   BEGIN
@@ -660,6 +656,216 @@ public ActionResult Delete(int id)
         }
     </tbody>
 </table>
+```
+### Edit/Update function for tblnames
+
+- [ ] Create new stored procedure for edit function
+
+```sql
+-- script for creating update name stored procedure
+CREATE PROCEDURE [dbo].[sp_update_name]
+	@id int,
+	@fname nvarchar(50),
+	@lname nvarchar(50)
+AS
+BEGIN
+	update tblnames set firstname=@fname, lastname=@lname where NameID=@id
+END
+```
+
+- [ ] Modify NamesRepository and add the code below.
+
+```cs
+public string updateName(tblname names)
+{
+  try
+  {
+    SqlCommand cmd = new SqlCommand("sp_update_name", conn);
+    cmd.CommandType = CommandType.StoredProcedure;
+    cmd.Parameters.AddWithValue("@id", names.NameID);
+    cmd.Parameters.AddWithValue("@lname", names.lastname);
+    cmd.Parameters.AddWithValue("@fname", names.firstname);
+    conn.Open();
+    cmd.ExecuteNonQuery();
+    conn.Close();
+    return "Success";
+  }
+  catch
+  {
+    return "Error";
+  }
+}
+```
+
+- [ ] Modify your controller. Copy the changes below.
+
+```diff
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Web;
+using System.Web.Mvc;
+using LearningMVC.Models;
+using LearningMVC.Repository;
+
+namespace LearningMVC.Controllers
+{
+  public class JLEPageController : Controller
+  {
+    // GET: JLEPage
+    public ActionResult Index()
+    {
+      MVCSEMINARDBEntities MVC = new MVCSEMINARDBEntities();
+
+      var data = from name in MVC.tblnames.OrderBy(x => x.NameID) select name;
+
+      return View(data);
+    }
+
+-    public ActionResult Add()
++    public ActionResult Add(int? id)
+    {
++      tblname name =new tblname();
++
++      if(id != null)
++      {
++        MVCSEMINARDBEntities MVC = new MVCSEMINARDBEntities();
++        var selectedName = from names in MVC.tblnames.Where(x => x.NameID == id) select names;
++
++        name = (tblname)selectedName.First();
++      }
++           
++      return View(name);
+-      return View();
+    }
+
+    [HttpPost]
+    public ActionResult AddName(tblname names)
+    {
+      // instantiate NamesReposity
+      NamesRepository namesRepository = new NamesRepository();
+-      // Call the saveName Method in NamesRepository
+-      string test = namesRepository.saveName(names.firstname, names.lastname);
++      if (names.NameID != 0)
++      {
++        string test = namesRepository.updateName(names);
++      }
++      else
++      {
++        // Call the saveName Method in NamesRepository
++        string test = namesRepository.saveName(names.firstname, names.lastname);
++      }
+      // redirect to index page after inserting new name
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult Delete(int id)
+    {
+      NamesRepository namesRepository = new NamesRepository();
+      string test = namesRepository.deleteName(id);
+      return RedirectToAction("Index");
+    }
+  }
+}
+```
+
+- [ ] Modify the Index page of your controller.
+
+```diff
+@model IEnumerable<LearningMVC.Models.tblname>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Names</h2>
+
+@Html.ActionLink("Add", "Add", "JLEPage", new { @class = "btn btn-primary" })
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="info">
+      <td>ID</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (LearningMVC.Models.tblname names in Model)
+    {
+      <tr>
+        <td>@names.NameID</td>
+        <td>@names.firstname</td>
+        <td>@names.lastname</td>
+        <td>
+          @Html.ActionLink("Delete", "Delete", "JLEPage", new { id= names.NameID} , new { @class = "btn btn-danger"})
++          @Html.ActionLink("Edit","Add","JLEPage", new { id = names.NameID }, new { @class = "btn btn-warning" })
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
+```
+
+- [ ] Modify the Add page of your controller.
+
+```diff
+@model LearningMVC.Models.tblname
+@{
+-    ViewBag.Title = "Add";
++    if (Model.NameID == 0)
++    {
++        ViewBag.Title = "Add";
++    }
++    else
++    {
++        ViewBag.Title = "Edit";
++    }
+}
+
+@using (Html.BeginForm("AddName", "JLEPage", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+  <fieldset>
+-    <legend><h2>Add</h2></legend>
++    @if (Model.NameID == 0)
++    {
++      <legend><h2>Add</h2></legend>
++    }
++    else
++    {
++      <legend><h2>Edit</h2></legend>
++    }
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">First Name: </label>
+      <div class="col-lg-10">
+        @Html.TextBoxFor(model => model.firstname, new { @class = "form-control" })
++        @Html.TextBoxFor(model => model.NameID, new { @class = "form-control hidden" })
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Last Name</label>
+      <div class="col-lg-10">
+        @Html.TextBoxFor(model => model.lastname, new { @class = "form-control" })
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+-        <button type="submit" class="btn btn-success">Add</button>
++        @if (Model.NameID == 0)
++        {
++          <button type="submit" class="btn btn-success">Add</button>
++        }
++        else
++        {
++          <button type="submit" class="btn btn-success">Save</button>
++        }
++        @Html.ActionLink("Cancel", "Index", "JLEPage", new {@class="btn btn-danger"})
+      </div>
+    </div>
+  </fieldset>
+}
+
 ```
 
 ## Code to push update
