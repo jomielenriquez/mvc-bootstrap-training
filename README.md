@@ -228,15 +228,19 @@
   [ ] [Download Link](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
 - [ ] After installing SSMS and SSMS Express. open your SSMS by typing "SSMS" in your windows search.
+  
   ![Search SSMS](./img/2.1.2.png)
 
 - [ ] SSMS will require you to connect to your database. Select the drop down on your SQL Server window and select "Browse for more".
+  
   ![Browse for more](./img/2.1.3.png)
 
 - [ ] Collapse the database engine and select any server under it and click "ok".
+  
   ![Select server](./img/2.1.4.png)
 
 - [ ] Click connect on your SQL Server window
+  
   ![Click connect](./img/2.1.5.png)
   
 
