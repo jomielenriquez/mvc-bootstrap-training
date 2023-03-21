@@ -249,17 +249,55 @@
 > Congrats, you are currently logged into your local machine's database.
 
 :minidisc: II. Creating new datase using SQL Sever Management Studio
- - [ ] On your SSMS, right click the Databases and click New Datase.
-   
+- [ ] On your SSMS, right click the Databases and click New Datase.
+  
   ![New Database](./img/2.2.1.png)
 
 - [ ] Create a name for your database and click "OK"
 
   ![database name](./img/2.2.2.png)
 
+- [ ] Creating new table in your database.
 
+```sql
+CREATE TABLE [dbo].[tblnames](
+	[NameID] [int] IDENTITY(1,1) NOT NULL,
+	[firstname] [nvarchar](50) NULL,
+	[lastname] [nvarchar](50) NULL,
+	[CreatedDate] [datetime] NULL
+) ON [PRIMARY]
+GO
+```
 
+- [ ] Inserting data in table
 
+```sql
+-- ENABLE INSRTING OF ID
+SET IDENTITY_INSERT [dbo].[tblnames] ON 
+
+-- SCRIPT TO INSERT DATA
+INSERT [dbo].[tblnames] ([NameID], [firstname], [lastname], [CreatedDate]) VALUES (1, N'Juan', N'Dela Cruz', CAST(N'2023-03-20T14:33:48.793' AS DateTime))
+INSERT [dbo].[tblnames] ([NameID], [firstname], [lastname], [CreatedDate]) VALUES (2, N'John', N'Doe', CAST(N'2023-03-20T15:23:54.870' AS DateTime))
+```
+
+- [ ] Selecting data in table
+
+```sql
+-- GET ALL THE DATA IN TBLNAMES
+SELECT * FROM TBLNAMES
+```
+- OUTPUT
+
+  ![OUTPUT WHEN SELECTING DATA](./img/2.2.3.png)
+
+- [ ] Deleting data in table
+
+```sql
+DELETE [CHANGEME_TO_TABLE_NAME] WHERE 1=1
+
+-- DELETE DATA IN TBLNAMES
+DELETE [DBO].[TBLNAMES] WHERE [FIRSTNAME] = 'Jomiel'
+```
 
 ## Code to push update
 ```
