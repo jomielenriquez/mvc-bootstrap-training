@@ -1051,7 +1051,7 @@ namespace LearningMVC.Controllers
   +<add name="MVCSEMINARDBEntities" connectionString="metadata=res://*/Models.MVCSEMINARDB.csdl|res://*/Models.MVCSEMINARDB.ssdl|res://*/Models.MVCSEMINARDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;workstation id=MVCSEMINARDB.mssql.somee.com;packet size=4096;user id=jomiel;pwd=jomielpogi123;data source=MVCSEMINARDB.mssql.somee.com;persist security info=False;initial catalog=MVCSEMINARDB&quot;" providerName="System.Data.EntityClient" />
   ```
 
-
+ > Congrats, Your web app should be working well now.
 
 ## Code to push update
 ```
