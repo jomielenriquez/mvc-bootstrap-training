@@ -1054,8 +1054,7 @@ namespace LearningMVC.Controllers
  > Congrats, Your web app should be working well now.
 
 
-### script to remove Somee
-## Code to push update add
+## Script to Remove Somee
 ```js
 $(document).ready(function () {
     for (i = 1; i < 11; i++) {
@@ -1071,10 +1070,4 @@ $(document).ready(function () {
         }, 500);
     }
 });
-```
-
-```
-git add .
-git commit -m "update"
-git push -u origin main
 ```
