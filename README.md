@@ -1054,7 +1054,7 @@ namespace LearningMVC.Controllers
  > Congrats, Your web app should be working well now.
 
 
-## Script to Remove Somee
+## Script to Remove Somee Ads
 ```js
 $(document).ready(function () {
     for (i = 1; i < 11; i++) {
