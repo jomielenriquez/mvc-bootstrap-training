@@ -887,6 +887,171 @@ namespace LearningMVC.Controllers
 ## :arrow_double_up: V. Deploying your web application to somee.
 > Deploying to somee
 
+- [ ] Create a new account at [somee](https://somee.com/doka/Identity/Account/Login?ReturnUrl=%2Fdoka%2FDOU) if you don't already have one.
+
+  ![somee](./img/2.5.1.png)
+
+- [ ] Click on start shopping.
+
+  ![shopping](./img/2.5.2.png)
+
+- [ ] Scroll to the bottom and click the order on free hosting package
+
+  ![frees hosting package](./img/2.5.3.png)
+
+- [ ] Create a new website by going to Website and creating an account with it.
+
+  ![create new website](./img/2.5.4.png)
+
+- [ ] Go to your newly created website and click on file manager. Delete default.asp.
+
+  ![file manager](./img/2.5.5.png)
+
+- [ ] On your windows. go to the directory of your web app project **C:\Users\[User]\source\repos\[Name of your project]\[Name of your project]**. Compress to ZIP everything in the directory of your Model, Controller and View.
+
+  ![compress your project](./img/2.5.6.png)
+
+- [ ] In your somee page file manage, click on "Upload" then click "Choose File" and locate your compressed file then click on "Upload and Unzipp archieves".
+
+  ![Unzipping](./img/2.5.7.png)
+
+- [ ] After uploading, go to **MS SQL > Databases > Create database** and create database name and select MS SQL 2019 Express.
+
+  > :warning: NOTE: Make that the name of your database base same as the name of your database in SSMS desktop and MS SQL Version must be MS SQL 2019 Express.
+
+  ![create database](./img/2.5.8.png)
+
+- [ ] In you SSMS Desktop, right click on your database then click **Tasks** and **Generate Scripts...**
+
+  ![order database](./img/2.5.9.png)
+
+- [ ] A new window will open, just click next
+
+  ![next](./img/2.5.10.png)
+  
+  ![next](./img/2.5.11.png)
+
+- [ ] Click on advance and scroll to the bottom and select "Schema and data" in Types of data to script click okay and click next.
+
+  ![next](./img/2.5.12.png)
+
+  ![next](./img/2.5.13.png)
+  
+  ![next](./img/2.5.14.png)
+
+- [ ] Wait until scripting is over
+
+  ![scripting](./img/2.5.15.png)
+
+  ![scripting](./img/2.5.16.png)
+
+- [ ] Open the generated script on ssms. **Location: Documents**. Delete the lines from **Use [master]** , **CREATE DATABASE** and **ALTER DATABASE**. Save tha file.
+
+  ```diff
+  -USE [master]
+  -GO
+  -/****** Object:  Database [MVCSEMINARDB]    Script Date: 22/03/2023 10:01:09 am ******/
+  -CREATE DATABASE [MVCSEMINARDB]
+  -CONTAINMENT = NONE
+  -ON  PRIMARY 
+  -( NAME = N'MVCSEMINARDB', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\MVCSEMINARDB.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+  -LOG ON 
+  -( NAME = N'MVCSEMINARDB_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\MVCSEMINARDB_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+  -WITH CATALOG_COLLATION = DATABASE_DEFAULT
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET COMPATIBILITY_LEVEL = 150
+  -GO
+  -IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+  -begin
+  -EXEC [MVCSEMINARDB].[dbo].[sp_fulltext_database] @action = 'enable'
+  -end
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ANSI_NULL_DEFAULT OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ANSI_NULLS OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ANSI_PADDING OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ANSI_WARNINGS OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ARITHABORT OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET AUTO_CLOSE OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET AUTO_SHRINK OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET AUTO_UPDATE_STATISTICS ON 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET CURSOR_CLOSE_ON_COMMIT OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET CURSOR_DEFAULT  GLOBAL 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET CONCAT_NULL_YIELDS_NULL OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET NUMERIC_ROUNDABORT OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET QUOTED_IDENTIFIER OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET RECURSIVE_TRIGGERS OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET  DISABLE_BROKER 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET DATE_CORRELATION_OPTIMIZATION OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET TRUSTWORTHY OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET PARAMETERIZATION SIMPLE 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET READ_COMMITTED_SNAPSHOT OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET HONOR_BROKER_PRIORITY OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET RECOVERY SIMPLE 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET  MULTI_USER 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET PAGE_VERIFY CHECKSUM  
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET DB_CHAINING OFF 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET DELAYED_DURABILITY = DISABLED 
+  -GO
+  -ALTER DATABASE [MVCSEMINARDB] SET QUERY_STORE = OFF
+  -GO
+  ```
+- [ ] On somee, go your database > **Run scripts** and click **FROM YOUR COMPUTER**. Locate the modified script to run.
+
+  ![scripting](./img/2.5.17.png)
+
+  > Wait till you see the message "Successfully executed"
+
+- [ ] Go to the database detail in somee and copy to clipboard the connection string.
+
+  ![scripting](./img/2.5.18.png)
+
+  > Conection String
+  ```
+  workstation id=MVCSEMINARDB.mssql.somee.com;packet size=4096;user id=jomiel;pwd=jomielpogi123;data source=MVCSEMINARDB.mssql.somee.com;persist security info=False;initial catalog=MVCSEMINARDB
+  ```
+
+- [ ] Go to file manager in somee and edit the connection string in web.config
+
+  ![scripting](./img/2.5.19.png)
+
+  ```diff
+  -<add name="MVCSEMINARDBEntities" connectionString="metadata=res://*/Models.MVCSEMINARDB.csdl|res://*/Models.MVCSEMINARDB.ssdl|res://*/Models.MVCSEMINARDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=LAPTOP-406FCLBI;initial catalog=MVCSEMINARDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  +<add name="MVCSEMINARDBEntities" connectionString="metadata=res://*/Models.MVCSEMINARDB.csdl|res://*/Models.MVCSEMINARDB.ssdl|res://*/Models.MVCSEMINARDB.msl;provider=System.Data.SqlClient;provider connection string=&quot;workstation id=MVCSEMINARDB.mssql.somee.com;packet size=4096;user id=jomiel;pwd=jomielpogi123;data source=MVCSEMINARDB.mssql.somee.com;persist security info=False;initial catalog=MVCSEMINARDB&quot;" providerName="System.Data.EntityClient" />
+  ```
+
+
 
 ## Code to push update
 ```
