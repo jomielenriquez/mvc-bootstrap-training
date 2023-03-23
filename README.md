@@ -200,7 +200,7 @@
   <h2>Index</h2>
   ```
   
-### :mechanic: Activity
+# :mechanic: Activity
 
   - [ ] Install Visual Studio.
   - [ ] Create new ASP.NET Web Application (.Net Framework) solution.
