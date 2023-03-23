@@ -1083,3 +1083,14 @@ $(document).ready(function () {
     }
 });
 ```
+
+# :mechanic: Activity
+  
+  - [ ] Install SSMS and SSMS Express.
+  - [ ] Create new database for your Web application
+    - [ ] Create new table for products. Modify the existing scripts and add new columns for middle name, school, age and year level.
+    - [ ] Insert sample data for your newly created table.
+  - [ ] Connect your database to your web application.
+  - [ ] Change the display page to add the extra columns to the display table.
+    - [ ] Modify the update and add page to allow adding and editing of middle name, school, age and year level.
+  - [ ] Deploy your web application to somee.com.
