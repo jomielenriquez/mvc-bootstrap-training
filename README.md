@@ -29,7 +29,7 @@
 <h3 align="center">1st Session - ASP.NET MVC and Bootstrap/Bootswatch</h3>
 
 <p align="center">
-  We'll spend our first session learning about the visual studio, ASP.NET MVC and how to implement bootstrap
+  We'll spend our first session learning about visual studio, ASP.NET MVC and how to implement bootstrap
   <br>
 </p>
 
