@@ -39,7 +39,7 @@
 - [x] :test_tube: II. Creating your first ASP.NET MVC solution
   - Exploring ASP.NET MVC solution
 - [x] :art: III. Implementing [Bootstrap/Bootswatch](https://bootswatch.com/3/)
-- [x] :page_facing_up: IV. Your first custom page
+- [x] :page_facing_up: IV. Customizing a page
 - [x] :scroll: V. Creating new page
 
 ## :wrench: I. Installing Visual Studio
@@ -118,7 +118,7 @@
 > Execute your solution.
   ![New theme implemented](./img/3.1.png)
 
-## :page_facing_up: IV. Your first custom page
+## :page_facing_up: IV. Customizing a page
 > We need to modify the home page and add the image of the seminar.
 
 > Go to Views/Home/Index.cshtml and add the image code
