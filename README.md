@@ -199,6 +199,18 @@
 
   <h2>Index</h2>
   ```
+  
+### :mechanic: Activity
+
+  - [ ] Install Visual Studio.
+  - [ ] Create new ASP.NET Web Application (.Net Framework) solution.
+  - [ ] Implement bootstrap in your project.
+  - [ ] Create your own page.
+    - [ ] New Controller
+    - [ ] New View
+    - [ ] Create new hyperlink in navigation for your new page.
+
+
 
 # :clock2: Second Session
 
