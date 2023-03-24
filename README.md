@@ -43,7 +43,7 @@
 - [x] :scroll: V. Creating new page
 
 ## :wrench: I. Installing Visual Studio
-- [ ] Download [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
+- [ ] Download and install [Visual Studio Community 2022](https://visualstudio.microsoft.com/vs/community/)
 - [ ] After installing, open Visual Studio Installer 
 
   ![Visual Studio Installer](./img/1.1.png)
